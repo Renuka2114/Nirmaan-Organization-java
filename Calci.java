@@ -1,43 +1,46 @@
-package day8;
+package Assessment;
 
-public class Calci {
-	
-	int frstnum;
-	int scndnum;
-	
-	void add() {
-		System.out.println("Add :" + (frstnum+scndnum));
+
+
+public class Calci implements Calculator {
+
+	@Override
+	public void add(int a, int b) {
+		System.out.println("Addition:"+ (a+b));
+		
 	}
-	
-	void sub() {
-		System.out.println("Sub :" + (frstnum-scndnum));
+
+	@Override
+	public void sub(int a, int b) {
+		System.out.println("Subtraction:"+ (a+b));		
 	}
-	
-	void multiple() {
-		System.out.println("Multiple :" + (frstnum*scndnum));
+
+	@Override
+	public void mul(int a, int b) {
+		System.out.println("Multiplication:" +(a+b));
+		
 	}
-	
-	void divide() {
-		System.out.println("Divide :" + (frstnum/scndnum));
-	}
-	
-	void modulus() {
-		System.out.println("Modulus :" + (frstnum%scndnum));
-	}
-	
-	public static void main (String[]args) {
-		Calci calculator =new Calci();
-		calculator.frstnum = 21;
-		calculator.scndnum = 14;
-		calculator.add();
-		calculator.sub();
-		calculator.multiple();
-		calculator.divide();
-		calculator.modulus();
+
+	@Override
+	public void div(int a, int b) {
+		System.out.println("Division:" +(a+b));
+		
+		
+		
+		
 		
 	}
 	
-	
+	public static void main(String[] args) {
+		Calci c=new Calci();
+		c.add(10, 20);
+		c.sub(10, 20);
+		c.mul(10, 20);
+		c.div(10, 20);
+		
 
+		
+	}
+	
 
 }
