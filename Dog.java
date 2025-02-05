@@ -1,10 +1,17 @@
-package Inheritance2;
+package InterfaceTask;
+import java.util.Scanner;
 
-public class Dog extends Animal{
-	@Override
+public class Dog implements Animal {
 	
-	void makeSound() {
-		System.out.println("The dog barks.");
+	@Override
+	public void move() {
+		System.out.println("The dog runs on four legs");
 	}
-
+	
+	@Override
+	public void speak() {
+		System.out.println("The dog says: Woof Woof!!");
+	}
+	
+	
 }
