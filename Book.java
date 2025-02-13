@@ -1,11 +1,17 @@
-package day14;
+package LibraryManagementSystem;
 
 public class Book {
-	private int id;
-	private String name;
-	private String author;
-	private double price;
-	
+	int id;
+	String name;
+	String author;
+	double price;
+	public Book(int id, String name, String author, double price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.author = author;
+		this.price = price;
+	}
 	public int getId() {
 		return id;
 	}
@@ -30,25 +36,14 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	public Book(int id,String name,String author,double price) {
-		this.id=id;
-		this.name=name;
-		this.author=author;
-		this.price=price;
-		
-	
-	
-	}
-	
-	public Book() {
-		
-	}
-	
+	@Override
 	public String toString() {
-		return "Book Id: " + id + "\nBook Name: " + name + "\nBook Author: " + author + "\nBook Price: " + price;
+		return "Book [id=" + id + ", name=" + name + ", author=" + author + ", price=" + price + "]";
+	}
+	public Book() {
+		super();
 	}
 	
-
+	
 
 }
